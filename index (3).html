@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sarees Business</title>
+  
+<style>
+  body {
+    font-family: Arial;
+    padding: 20px;
+  }
+
+  h1 {
+    color: #8b004f;
+  }
+
+  h2 {
+    margin-top: 30px;
+    color: #444;
+  }
+
+  img {
+    display: block;
+    margin: 15px 0;
+    border-radius: 8px;
+  }
+.sarees {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+#search {
+  width: 100%;
+  padding: 10px;
+  margin: 15px 0;
+  font-size: 16px;
+}
+  <style>
+    body {
+      font-family: Arial;
+      padding: 20px;
+    }
+
+    h1 {
+      color: #8b004f;
+    }
+
+    h2 {
+      margin-top: 30px;
+      color: #444;
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <h1>Welcome to Our Sarees Business</h1>
+  <p>Quality sarees for every occasion.</p>
+
+  <h2>About Us</h2>
+  <p>We sell traditional and modern sarees with trusted quality.</p>
+  <input
+  type="text"
+  id="search"
+  placeholder="Search sarees..."
+  onkeyup="searchSarees()"
+>
+
+<h2>Our Sarees</h2>
+
+<div class="sarees">
+  <div>
+    <img src="saree1.jpg" width="150">
+    <p>Cotton Saree<br>₹1,200</p>
+  </div>
+
+  <div>
+    <img src="saree2.jpg" width="150">
+    <p>Silk Saree<br>₹3,500</p>
+  </div>
+
+  <div>
+    <img src="saree3.jpg" width="150">
+    <p>Designer Saree<br>₹5,000</p>
+  </div>
+  
+</div>
+    <img src="saree4.jpg" width
+      ="150"
+    <p>Designer Saree<br>₹4000</p>
+</div>
+
+<p>Cotton Sarees</p>
+<p>Silk Sarees</p>
+<p>Designer Sarees</p>
+
+  <h2>Contact</h2>
+  <p>Phone: 6305700901</p>
+  <p>Email: mallepogumadhan@gmail.com</p>
+  <script>
+  function searchSarees() {
+    let input = document.getElementById("search").value.toLowerCase();
+    let items = document.querySelectorAll(".sarees div");
+
+    items.forEach(function(item) {
+      let text = item.innerText.toLowerCase();
+      item.style.display = text.includes(input) ? "block" : "none";
+    });
+  }
+</script>
+
+</body>
+</html>
